@@ -18,3 +18,4 @@ utils/randLocalGraph
 utils/rMatGraph
 utils/SNAPtoAdj
 utils/wghSNAPtoAdj
+apps/SPMV

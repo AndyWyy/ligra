@@ -76,4 +76,5 @@ void Compute(graph<vertex>& GA, commandLine P){
     }
     free(vectors);
     free(outputs);
+    free(flags);
 }
