@@ -16,7 +16,6 @@ struct SPMV_F{
             if(s == round){
                 *result += edgeLen * vectors[round];
             }
-            printf("%d,%d,%d\n",s,d,edgeLen);
             return true;
         }
         else return false;
@@ -52,7 +51,7 @@ void Compute(graph<vertex>& GA, commandLine P){
         outputs[i] = 0;
         if(GA.V[i].getOutDegree() != 0){
             for(int j = 0 ; j < GA.V[i].getOutDegree() ; j++){
-                if(i == GA.V[i].getOutNeighbor(j)) outputs[i] = GA.V[i].getInWeight(j);
+                if(i == GA.V[i].getOutNeighbor(j)) outputs[i] = GA.V[i].getOutWeight(j);
             }
         }
     }
@@ -70,8 +69,6 @@ void Compute(graph<vertex>& GA, commandLine P){
         }
         parallel_for(long i = 0; i < n; i++)
             flags[i] = UINT_E_MAX;
-        
-        printf("%ld\n", i);
         Frontier.del();
     }
     for(int i = 0 ; i < n ; i++){

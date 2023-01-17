@@ -1,7 +1,6 @@
 .vscode/c_cpp_properties.json
 
-inputs/sample.adj
-inputs/sample.snap
+
 utils/adjGraphAddWeights
 utils/adjHypergraphAddWeights
 utils/adjToBinary
